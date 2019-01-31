@@ -26,9 +26,9 @@ app.use((req, res, next)=>{ //log middleware
 });
 
 app.use(express.static(__dirname+ '/public')); //middleware
-app.use((req, res, next)=>{
+/*app.use((req, res, next)=>{
     res.render('maintainence.hbs');
-})
+})*/
 
 app.get('/', (req, res)=>{
     res.render('home.hbs', {
@@ -40,6 +40,12 @@ app.get('/', (req, res)=>{
 app.get('/about', (req, res)=>{
     res.render('about.hbs', {
         pageTitle: 'About',
+    })
+});
+
+app.get('/project', (req, res)=>{
+    res.render('project.hbs', {
+        pageTitle: 'Project',
     })
 });
 
